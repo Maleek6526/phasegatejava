@@ -6,8 +6,10 @@ public class ArraySquareInASortedForm{
 		int[] elements = {2, 1, 4, 3, 5, 9};
 
 		System.out.println("The Square of the elements are " + Arrays.toString(getSquareOfElement(elements)));
+
+		int[] sort = getSortNumbers(elements);
 	
-	System.out.print("The Square of the elements are " + Arrays.toString(getSortNumbers(elements)));
+		System.out.print("The sorted form of the element is "+ Arrays.toString(sort));
 	}
 
 public static int[] getSquareOfElement(int[] numbers){
@@ -23,7 +25,9 @@ public static int[] getSquareOfElement(int[] numbers){
 	}
 
 
- public static void getSortNumbers(int [] array){
+ public static int[] getSortNumbers(int [] array){
+
+	
 
 	for(int index = 0; index < array.length; index++){
 		
@@ -38,7 +42,7 @@ public static int[] getSquareOfElement(int[] numbers){
 				array[count] = number;
 			}
 		}
-	}
+	}return array;
 	
    }
 
